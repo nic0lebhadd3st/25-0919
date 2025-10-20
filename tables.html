@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Two Tables with 40 Unique Cell Colors (Pure CSS)</title>
+    <style>
+        /*
+        =========================================================
+        CSS CODE START
+        =========================================================
+        */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* General Table Styling */
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            border: 1px solid #000; /* Stronger border to define cells */
+            padding: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        /* Header Row Coloring (8 unique colors for 4 columns * 2 tables) */
+        #table1 thead th:nth-child(1) { background-color: #2c3e50; color: white; } /* Dark Blue */
+        #table1 thead th:nth-child(2) { background-color: #16a085; color: white; } /* Green Sea */
+        #table1 thead th:nth-child(3) { background-color: #e67e22; color: white; } /* Carrot */
+        #table1 thead th:nth-child(4) { background-color: #c0392b; color: white; } /* Pomegranate */
+
+        #table2 thead th:nth-child(1) { background-color: #9b59b6; color: white; } /* Amethyst */
+        #table2 thead th:nth-child(2) { background-color: #f1c40f; color: #333; } /* Sunflower */
+        #table2 thead th:nth-child(3) { background-color: #3498db; color: white; } /* Peter River */
+        #table2 thead th:nth-child(4) { background-color: #e74c3c; color: white; } /* Alizarin */
+
+        /*
+        =========================================================
+        TABLE 1: 5 Rows x 4 Columns = 20 Unique Cell Colors
+        =========================================================
+        */
+
+        /* Row 1 */
+        #table1 tbody tr:nth-child(1) td:nth-child(1) { background-color: #ecf0f1; }
+        #table1 tbody tr:nth-child(1) td:nth-child(2) { background-color: #bdc3c7; }
+        #table1 tbody tr:nth-child(1) td:nth-child(3) { background-color: #7f8c8d; }
+        #table1 tbody tr:nth-child(1) td:nth-child(4) { background-color: #34495e; color: white; }
+
+        /* Row 2 */
+        #table1 tbody tr:nth-child(2) td:nth-child(1) { background-color: #1abc9c; color: white; }
+        #table1 tbody tr:nth-child(2) td:nth-child(2) { background-color: #2ecc71; color: white; }
+        #table1 tbody tr:nth-child(2) td:nth-child(3) { background-color: #27ae60; color: white; }
+        #table1 tbody tr:nth-child(2) td:nth-child(4) { background-color: #16a085; color: white; }
+
+        /* Row 3 */
+        #table1 tbody tr:nth-child(3) td:nth-child(1) { background-color: #d35400; color: white; }
+        #table1 tbody tr:nth-child(3) td:nth-child(2) { background-color: #e67e22; color: white; }
+        #table1 tbody tr:nth-child(3) td:nth-child(3) { background-color: #f39c12; }
+        #table1 tbody tr:nth-child(3) td:nth-child(4) { background-color: #f1c40f; }
+
+        /* Row 4 */
+        #table1 tbody tr:nth-child(4) td:nth-child(1) { background-color: #3498db; color: white; }
+        #table1 tbody tr:nth-child(4) td:nth-child(2) { background-color: #2980b9; color: white; }
+        #table1 tbody tr:nth-child(4) td:nth-child(3) { background-color: #2c3e50; color: white; }
+        #table1 tbody tr:nth-child(4) td:nth-child(4) { background-color: #95a5a6; }
+
+        /* Row 5 */
+        #table1 tbody tr:nth-child(5) td:nth-child(1) { background-color: #e74c3c; color: white; }
+        #table1 tbody tr:nth-child(5) td:nth-child(2) { background-color: #c0392b; color: white; }
+        #table1 tbody tr:nth-child(5) td:nth-child(3) { background-color: #9b59b6; color: white; }
+        #table1 tbody tr:nth-child(5) td:nth-child(4) { background-color: #8e44ad; color: white; }
+
+
+        /*
+        =========================================================
+        TABLE 2: 5 Rows x 4 Columns = 20 Unique Cell Colors
+        =========================================================
+        */
+
+        /* Row 1 */
+        #table2 tbody tr:nth-child(1) td:nth-child(1) { background-color: #8e44ad; color: white; }
+        #table2 tbody tr:nth-child(1) td:nth-child(2) { background-color: #9b59b6; color: white; }
+        #table2 tbody tr:nth-child(1) td:nth-child(3) { background-color: #c0392b; color: white; }
+        #table2 tbody tr:nth-child(1) td:nth-child(4) { background-color: #e74c3c; color: white; }
+
+        /* Row 2 */
+        #table2 tbody tr:nth-child(2) td:nth-child(1) { background-color: #95a5a6; }
+        #table2 tbody tr:nth-child(2) td:nth-child(2) { background-color: #2c3e50; color: white; }
+        #table2 tbody tr:nth-child(2) td:nth-child(3) { background-color: #2980b9; color: white; }
+        #table2 tbody tr:nth-child(2) td:nth-child(4) { background-color: #3498db; color: white; }
+
+        /* Row 3 */
+        #table2 tbody tr:nth-child(3) td:nth-child(1) { background-color: #f1c40f; }
+        #table2 tbody tr:nth-child(3) td:nth-child(2) { background-color: #f39c12; }
+        #table2 tbody tr:nth-child(3) td:nth-child(3) { background-color: #e67e22; color: white; }
+        #table2 tbody tr:nth-child(3) td:nth-child(4) { background-color: #d35400; color: white; }
+
+        /* Row 4 */
+        #table2 tbody tr:nth-child(4) td:nth-child(1) { background-color: #16a085; color: white; }
+        #table2 tbody tr:nth-child(4) td:nth-child(2) { background-color: #27ae60; color: white; }
+        #table2 tbody tr:nth-child(4) td:nth-child(3) { background-color: #2ecc71; color: white; }
+        #table2 tbody tr:nth-child(4) td:nth-child(4) { background-color: #1abc9c; color: white; }
+
+        /* Row 5 */
+        #table2 tbody tr:nth-child(5) td:nth-child(1) { background-color: #34495e; color: white; }
+        #table2 tbody tr:nth-child(5) td:nth-child(2) { background-color: #7f8c8d; }
+        #table2 tbody tr:nth-child(5) td:nth-child(3) { background-color: #bdc3c7; }
+        #table2 tbody tr:nth-child(5) td:nth-child(4) { background-color: #ecf0f1; }
+        /*
+        =========================================================
+        CSS CODE END
+        =========================================================
+        */
+    </style>
+</head>
+<body>
+
+    <h2>Table 1: Student Enrollment Data (40 Unique Cell Colors)</h2>
+
+    <table id="table1">
+        <thead>
+            <tr>
+                <th>School Code</th>
+                <th>Student Name</th>
+                <th>Lecturer Name</th>
+                <th>Course (Credits)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>UNIV101</td>
+                <td>Alice Johnson</td>
+                <td>Dr. Smith</td>
+                <td>Calculus I (3)</td>
+            </tr>
+            <tr>
+                <td>UNIV102</td>
+                <td>Bob Williams</td>
+                <td>Prof. Lee</td>
+                <td>Comp. Science (4)</td>
+            </tr>
+            <tr>
+                <td>UNIV101</td>
+                <td>Charlie Brown</td>
+                <td>Dr. Smith</td>
+                <td>Linear Algebra (3)</td>
+            </tr>
+            <tr>
+                <td>UNIV103</td>
+                <td>Dana Scully</td>
+                <td>Prof. Patel</td>
+                <td>Organic Chem (4)</td>
+            </tr>
+            <tr>
+                <td>UNIV102</td>
+                <td>Eric Clapton</td>
+                <td>Dr. Cho</td>
+                <td>Economics 101 (3)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr style="width: 80%; border-top: 2px dashed #aaa;">
+
+    <h2>Table 2: Student/Course Roster (40 Unique Cell Colors)</h2>
+
+    <table id="table2">
+        <thead>
+            <tr>
+                <th>Course Name</th>
+                <th>Credits</th>
+                <th>Lecturer</th>
+                <th>School Code (Student)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Physics II</td>
+                <td>4</td>
+                <td>Dr. Smith</td>
+                <td>UNIV103 (G. House)</td>
+            </tr>
+            <tr>
+                <td>Creative Writing</td>
+                <td>3</td>
+                <td>Prof. Lee</td>
+                <td>UNIV101 (H. Potter)</td>
+            </tr>
+            <tr>
+                <td>Data Structures</td>
+                <td>4</td>
+                <td>Dr. Cho</td>
+                <td>UNIV102 (I. K. Man)</td>
+            </tr>
+            <tr>
+                <td>Art History</td>
+                <td>3</td>
+                <td>Prof. Patel</td>
+                <td>UNIV103 (J. Bond)</td>
+            </tr>
+            <tr>
+                <td>Thermodynamics</td>
+                <td>4</td>
+                <td>Dr. Smith</td>
+                <td>UNIV101 (K. L. Clark)</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
